@@ -22,7 +22,7 @@ const productSchema=new mongoose.Schema({
         default:0,
     },
     winTeam:{
-        type:mongoose.Schema.type.objectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'team',
     }
 
