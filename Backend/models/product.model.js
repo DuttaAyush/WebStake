@@ -12,7 +12,6 @@ const productSchema=new mongoose.Schema({
     },
     description:{
         type:String,
-        required:true,
     },
     startingPrice:{
         type:Number,
@@ -21,7 +20,6 @@ const productSchema=new mongoose.Schema({
     highestBid:{
         type:Number,
         default:0,
-        required:true,
     },
     winTeam:{
         type:mongoose.Schema.type.objectId,

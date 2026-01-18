@@ -13,10 +13,11 @@ const teamSchema=new mongoose.Schema({
         required:true,
         unique:true,
     },
-    members:[{
-        type:String,
+    members:{
+        type:[String],
         required:true,
-    }],
+        default:[],
+    },
     points:{
         type:Number,
         default:0,
