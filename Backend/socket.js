@@ -3,7 +3,7 @@ const teamModel = require('./models/team.model');
 const productModel = require('./models/product.model');
 
 let io;
-let currentAuction = null; // { productId, startTime, endTime, timerId, extensionThreshold, extensionAmount }
+let currentAuction = null; 
 
 function initializeSocket(server) {
     console.log('Initializing Socket.io...');
