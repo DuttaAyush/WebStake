@@ -6,9 +6,8 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const connectToDb = require('./db/db');
 const adminRoutes = require('./routes/admin.routes');
-// const captainRoutes = require('./routes/captain.routes');
-// const mapsRoutes = require('./routes/maps.routes')
-// const rideRoutes = require('./routes/ride.routes')
+const teamRoutes = require('./routes/team.routes');
+const productRoutes = require('./routes/product.routes');
 
 connectToDb();
 
@@ -23,12 +22,10 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
-app.use('/admin', adminRoutes);
-// app.use('/captains', captainRoutes);
-// app.use('/maps', mapsRoutes);
-// app.use('/rides', rideRoutes);
-
-
+// Add routes
+app.use('/api/teams', teamRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/admin', adminRoutes);
 
 
 module.exports = app;
